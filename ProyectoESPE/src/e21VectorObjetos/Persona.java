@@ -1,6 +1,7 @@
 
-package e0011Persona;
+package e21VectorObjetos;
 
+import e0011Persona.*;
 import java.util.Scanner;
 
 
