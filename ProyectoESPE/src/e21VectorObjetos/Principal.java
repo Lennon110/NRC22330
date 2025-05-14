@@ -16,6 +16,7 @@ public class Principal {
     public static void main(String[] args) {
         // TODO code application logic here
         Persona[] vector = new Persona[4];
+        int suma=0;
         
         for (int i = 0; i < vector.length; i++) {
             Persona persona = new Persona();
@@ -23,9 +24,25 @@ public class Principal {
         }
         
         for (int i = 0; i < vector.length; i++) {
-            System.out.println(vector[i].toString());
+            Persona persona = new Persona();
+            persona.ingresarDatos();
+            suma += persona.getEdad();
+            vector[i] = persona;
             
         }
+        
+        System.out.println();        
+        for (int i = 0; i < vector.length; i++) {
+            System.out.println(vector[i].toString());            
+        }
+        
+        System.out.println();
+        
+        for(Persona p: vector){
+            System.out.println(p.toString());
+        }
+        
+        
     }
     
 }
