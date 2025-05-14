@@ -53,7 +53,6 @@ public class Persona {
         setEdad(leer.nextInt());
         System.out.print("Ingresa el genero: ");
         setGenero(leer.nextLine());
-        
         System.out.print("Ingresa el peso: ");
         this.setPeso(leer.nextFloat());
         

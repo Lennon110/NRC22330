@@ -41,6 +41,8 @@ public class Principal {
         for(Persona p: vector){
             System.out.println(p.toString());
         }
+        System.out.println("La suma es " + suma);
+        
         
         
     }
