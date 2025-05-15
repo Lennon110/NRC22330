@@ -1,7 +1,6 @@
 
-package e21VectorObjetos;
+package e22arraylist;
 
-import e0011Persona.*;
 import java.util.Scanner;
 
 
@@ -52,7 +51,7 @@ public class Persona {
         System.out.print("Ingresa la edad: ");
         setEdad(leer.nextInt());
         System.out.print("Ingresa el genero: ");
-        setGenero(leer.nextLine());
+        setGenero(leer.next());
         System.out.print("Ingresa el peso: ");
         this.setPeso(leer.nextFloat());
         
