@@ -1,7 +1,7 @@
 package e13factura;
 
 
-public class Principal_1 {
+public class Principal {
 
     public static void main(String[] args) {
         
