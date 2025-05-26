@@ -1,10 +1,10 @@
 
-package e13factura;
+package e25RepasoPrueba;
 
 import java.util.Scanner;
 
-
 public class Fecha {
+    
     //Atributos
     private int dia;
     private int mes;

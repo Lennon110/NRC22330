@@ -1,75 +1,82 @@
+package e25RepasoPrueba;
 
+import java.util.*;
 
-
-/*ufa espe
-    carrera patito
-    nombre          periodo
-    asignatura      nrc
-    fecha:
-    Tema: programa en java que permite mostrar un menu
-*/
-
-import java.util.Scanner;
-
-public class E005Menu {
-    
-    static int numero1=0, numero2=0;
-    static int resultado=0;
+public class Principal {
     
     //main
     public static void main(String[] args) {
-        //variables
-        char opcion;
+        //variables locales
         Scanner leer = new Scanner(System.in);
+        Vehiculo vehiculo = new Vehiculo();
+        ArrayList <Vehiculo> vector = new ArrayList <Vehiculo>();
+        double suma=0;
+        char opcion;
         
         //codigo
         do{
             System.out.println("\n\nMENU");
-            System.out.println("1. Suma");
-            System.out.println("2. Resta");
-            System.out.println("3. Salir");
+            System.out.println("1. Ingresar Vehiculo");
+            System.out.println("2. Mostrar Vehiculo");
+            System.out.println("3. Costo Total");
+            System.out.println("4. Ordenar por placa");
+            System.out.println("5. Salir");
             System.out.println("Seleccione la opcion: ");
             opcion = leer.next().charAt(0);
             
             switch(opcion){
                 case '1':
-                    System.out.println("Ejecuto la opcion 1");
-                    ingresarDatos();
-                    int suma = Sumar();
-                    System.out.println("La suma es: "+suma);
+                    ingresarDatos(vehiculo, vector);
+                    //vehiculo = new Vehiculo(); //IMPORTANTE PONER ESTA LINEA, INICIALIZAR INGRESAR Y ASIGNAR
+                    //vehiculo.ingresarDatos();
+                    //vector.add(vehiculo);
                     break;
                 case '2':
-                    System.out.println("Ejecuto la opcion 2");
-                    ingresarDatos();
-                    int resta = Restar();
-                    System.out.println("La resta es: "+resta);
+                    mostrarVehiculo(vector);
+//                    Iterator <Vehiculo> it = vector.iterator(); //SABER DE MEMORIA
+//                    for(it = vector.iterator(); it.hasNext();){
+//                        System.out.println(it.next());
+//                    }
                     break;
                 case '3':
-                    System.out.println("Gracias por utilizar el programa");
+                    suma = 0;
+                    Iterator<Vehiculo> it;
+                    for (it = vector.iterator(); it.hasNext();) {
+                        suma = suma + it.next().getCosto();
+                    }
+                    System.out.println("Suma: " + suma);
                     break;
+                case '4':
+                    Iterator<Vehiculo> it1;
+                    Iterator<Vehiculo>
+                    
+                    break;
+                case '5':
+                    System.out.println("Gracias por utilizar");
+                    break;
+                    
                 default:
                     System.out.println("Opcion no valida");
             }
-        }while(opcion != '3');
+        }while(opcion != '5');
         
     }
-
-    private static int Sumar() {        
-        resultado = numero1 + numero2;
-        return resultado;
-    }
     
-    private static int Restar() {
-        resultado = numero1 + numero2;
-        return resultado;
+    //metodo que permite ingresar datos del vehiculo
+    private static void ingresarDatos(Vehiculo vehiculo, ArrayList <Vehiculo> vector) {
+        vehiculo = new Vehiculo();
+        vehiculo.ingresarDatos();
+        vector.add(vehiculo);
     }
     
     
-    private static void ingresarDatos() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Ingrese un numero1: ");
-        numero1 = scanner.nextInt();
-        System.out.print("Ingrese un numero2: ");
-        numero2 = scanner.nextInt();
+    //metodo que permite mostrar los datos de un vehiculo
+    private static void mostrarVehiculo(ArrayList <Vehiculo> vector) {
+        Iterator<Vehiculo> it;
+        for (it = vector.iterator(); it.hasNext();) {
+            System.out.println(it.next());
+        }
     }
+    
+    
 }
