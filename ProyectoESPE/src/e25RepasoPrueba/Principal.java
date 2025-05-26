@@ -18,9 +18,8 @@ public class Principal {
             System.out.println("\n\nMENU");
             System.out.println("1. Ingresar Vehiculo");
             System.out.println("2. Mostrar Vehiculo");
-            System.out.println("3. Costo Total");
-            System.out.println("4. Ordenar por placa");
-            System.out.println("5. Salir");
+            System.out.println("3. Ordenar por placa");
+            System.out.println("4. Salir");
             System.out.println("Seleccione la opcion: ");
             opcion = leer.next().charAt(0);
             
@@ -39,26 +38,35 @@ public class Principal {
 //                    }
                     break;
                 case '3':
-                    suma = 0;
-                    Iterator<Vehiculo> it;
-                    for (it = vector.iterator(); it.hasNext();) {
-                        suma = suma + it.next().getCosto();
+                    System.out.println("Ordenar:");
+                    Iterator<Vehiculo> it1 = vector.iterator();
+                    Iterator<Vehiculo> it2;
+                    double minimo = 0;
+                    minimo =  it1.next().getCosto();
+                    for (it1 = vector.iterator(); it1.hasNext();) {
+                        double costo1 = it1.next().getCosto();
+                        
+                        for (it2 = vector.iterator(); it2.hasNext();) {
+                            double costo2 = it2.next().getCosto();
+                            if(minimo > costo2){
+                                minimo = costo1;
+                                
+                            }
+
+                        }
+                        System.out.println(minimo);
                     }
-                    System.out.println("Suma: " + suma);
-                    break;
-                case '4':
-                    Iterator<Vehiculo> it1;
-                    Iterator<Vehiculo>
+                                                 
                     
                     break;
-                case '5':
+                case '4':
                     System.out.println("Gracias por utilizar");
                     break;
                     
                 default:
                     System.out.println("Opcion no valida");
             }
-        }while(opcion != '5');
+        }while(opcion != '4');
         
     }
     
