@@ -39,22 +39,24 @@ public class Principal {
                     break;
                 case '3':
                     System.out.println("Ordenar:");
+                    Vehiculo auxiliar = new Vehiculo();
                     Iterator<Vehiculo> it1 = vector.iterator();
                     Iterator<Vehiculo> it2;
-                    double minimo = 0;
-                    minimo =  it1.next().getCosto();
+                    auxiliar.setCosto(it1.next().getCosto());
+                    
                     for (it1 = vector.iterator(); it1.hasNext();) {
-                        double costo1 = it1.next().getCosto();
-                        
+
                         for (it2 = vector.iterator(); it2.hasNext();) {
-                            double costo2 = it2.next().getCosto();
-                            if(minimo > costo2){
-                                minimo = costo1;
-                                
+                            if (auxiliar.getCosto() > it2.next().getCosto()) {
+                                auxiliar = new Vehiculo();
+                                auxiliar = it1.next();
+                                //auxiliar.setCosto(it1.next().getCosto());
+
                             }
 
                         }
-                        System.out.println(minimo);
+                        System.out.println(auxiliar.getCosto());
+                        System.out.println(auxiliar.getPlaca());
                     }
                                                  
                     
