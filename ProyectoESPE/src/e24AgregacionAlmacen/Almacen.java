@@ -8,6 +8,7 @@ public class Almacen {
     private String nombre;
     private String direccion;
     
+    //constructor
     public Almacen(){
         nombre = "ESTE";
         direccion = null;        
@@ -30,7 +31,7 @@ public class Almacen {
     //metodod mensaje
     
     public String mensaje(Cliente cliente){
-    return "Cliente en mora: " + cliente.getNombre();
+        return "Cliente en mora: " + cliente.getNombre();
     }
     
     /**

@@ -10,8 +10,8 @@ public class Factura {
     public char tipoDocumento;
     private String numeroFactura;
     protected Fecha fecha;
-    Empresa empresa;
-    Cliente cliente;
+    private Empresa empresa;
+    private Cliente cliente;
     Producto producto;
     Producto []vector;
     
@@ -26,7 +26,7 @@ public class Factura {
         producto = new Producto();
         vector = new Producto[3];
         for (int i = 0; i < 3; i++) {
-            //producto = new Producto();
+            producto = new Producto();
             vector[i] = producto;                       
         }
     }
@@ -40,8 +40,8 @@ public class Factura {
         getFecha().ingresarDatos();
         System.out.print("Ingrese el tipo de documentos: ");
         setTipoDocumento(sc.next().charAt(0));
-        empresa.ingresarDatos();
-        cliente.ingresarDatos();
+        getEmpresa().ingresarDatos();
+        getCliente().ingresarDatos();
         for (int i = 0; i < 3; i++) {
             producto = new Producto();
             producto.ingresarDatos();
@@ -58,11 +58,11 @@ public class Factura {
     
      public void mostrarFactura() {
          System.out.println("\t\t\tDatos factura".toUpperCase() + "\n\t\t\t\t\tFactura: " + numeroFactura
-                 +empresa.getNombre()
+                 +getEmpresa().getNombre()
         +"\n" + fecha + "\t\t\t\tTipo Documento:  " + tipoDocumento);
          
-         System.out.println(empresa.mostrarDatos());
-         System.out.println(cliente);
+         System.out.println(getEmpresa().mostrarDatos());
+         System.out.println(getCliente());
          for (int i = 0; i < 3; i++) {
              System.out.println(vector[i].toString());
         }
@@ -108,6 +108,34 @@ public class Factura {
      */
     public void setFecha(Fecha fecha) {
         this.fecha = fecha;
+    }
+
+    /**
+     * @return the empresa
+     */
+    public Empresa getEmpresa() {
+        return empresa;
+    }
+
+    /**
+     * @param empresa the empresa to set
+     */
+    public void setEmpresa(Empresa empresa) {
+        this.empresa = empresa;
+    }
+
+    /**
+     * @return the cliente
+     */
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    /**
+     * @param cliente the cliente to set
+     */
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
     
     

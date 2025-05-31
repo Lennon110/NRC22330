@@ -24,28 +24,12 @@ public class Persona {
         this.peso = (float)50.5;
     }
     
-    
-    /*public Persona(String cedula, String nombre){
-        this.cedula = cedula;
-        this.nombre = nombre;
-    }
-    
-    
-    public Persona(String cedula, String nombre, int edad, String genero, float peso) {
-        this.cedula = cedula;
-        this.nombre = nombre;
-        this.edad = edad;
-        this.genero = genero;
-        this.peso = peso;
-    }
-    */
-    
     //Metodos Usuario
     
     public void ingresarDatos(){
         Scanner leer = new Scanner(System.in);
         System.out.print("Ingrese la cedula: ");
-        this.setCedula(leer.nextLine());
+        setCedula(leer.nextLine());
         System.out.print("Ingresa el nombre: ");
         setNombre(leer.nextLine());
         System.out.print("Ingresa la edad: ");
@@ -53,16 +37,14 @@ public class Persona {
         System.out.print("Ingresa el genero: ");
         setGenero(leer.next());
         System.out.print("Ingresa el peso: ");
-        this.setPeso(leer.nextFloat());
-        
-        //setCedula(leer.nextLine());
+        setPeso(leer.nextFloat());
     }
     
     public void mostrarDatosPersona(){
         System.out.println("Los datos son: ".toUpperCase());
         System.out.println("La cedula es: " + getCedula());
         System.out.println("El nombre es: " + getNombre());
-        System.out.println("La edad es: " + this.getEdad());
+        System.out.println("La edad es: " + getEdad());
         System.out.println("El genero es: " + getGenero());
         System.out.println("El peso es: " + getPeso());
   
@@ -70,7 +52,7 @@ public class Persona {
     
     //Metodos Especiales
 
-   @Override
+    @Override
     public String toString() {
         return "Persona{" + "cedula=" + getCedula() + ", nombre=" + getNombre() + ", edad=" + getEdad() + ", genero=" + getGenero() + ", peso=" + getPeso() + '}';
     }

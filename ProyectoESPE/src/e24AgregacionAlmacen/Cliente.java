@@ -4,12 +4,15 @@ package e24AgregacionAlmacen;
 import java.util.Scanner;
 
 public class Cliente {
+    //atributos
     private String nombre;
     
+    //constructor
     public Cliente(){
         this.nombre = null; 
     }
     
+    //metodos usario
     public void ingresarCliente(){
         Scanner scanner = new Scanner(System.in);       
         System.out.println("Ingrese el nombre: ");

@@ -4,7 +4,8 @@ public class Almacen {
     //atributos
     private String nombre;
     private Cuenta cuenta;
-
+    
+    //constructor
     public Almacen() {
         this.nombre = "FeelGoodInc";
         this.cuenta = new Cuenta();
