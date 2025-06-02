@@ -16,7 +16,7 @@ public class Persona {
         this.peso = (float)0.0; //si pongo 0.0 hago cast
     }
     
-    //metodos que permite ingresar datos de la persona
+    //metodo que permite ingresar datos de la persona
     public void ingresarDatos(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Ingrese la cedula: ");
@@ -29,7 +29,7 @@ public class Persona {
     
     //metodo que permite mostrar datos de la persona
     public void mostrarDatos(){
-        System.out.println(this.getCedula() + "\t" + nombre + "\t" + peso);
+        System.out.print(this.getCedula() + "\t" + nombre + "\t" + peso);
     }
 
     public String getCedula() {
