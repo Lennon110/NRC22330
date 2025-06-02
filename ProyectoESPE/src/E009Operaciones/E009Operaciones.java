@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class E009Operaciones {
      //VARIABLES 
-    static int numero1=0, numero2=0;
+    static int numero1, numero2;
    
     public static void main(String[] args) {
          //declaracion var

@@ -14,7 +14,7 @@ public class e15Excepcion2 {
 
     public static void main(String[] args) {
         
-        //InputStreamReader isr = new InputStreamReader(System.in);
+    //InputStreamReader isr = new InputStreamReader(System.in);
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String str1 = "0";
         int numero1 = 100;

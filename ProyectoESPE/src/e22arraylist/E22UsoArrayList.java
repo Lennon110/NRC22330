@@ -10,7 +10,7 @@ public class E22UsoArrayList {
     public static void main(String[] args) {
         
         //declarar    
-        LinkedList<Persona> vector = new LinkedList<>();        
+        ArrayList<Persona> vector = new ArrayList<>();        
         Scanner leer = new Scanner(System.in);
         char opcion;
         
@@ -28,12 +28,11 @@ public class E22UsoArrayList {
             
             switch(opcion){
                 case '1':
-                    System.out.println("Ejecuto la opcion 1");
+                    System.out.println("Ingreso de datos");
                     ingresarDatos(vector);
-
                     break;
                 case '2':
-                    System.out.println("Ejecuto la opcion 2");
+                    System.out.println("Mostrando datos");
                     //ingresarDatos();
                     System.out.println("\nCon el Iterator");
                     for (Iterator<Persona> it = vector.iterator(); it.hasNext();) {
@@ -58,21 +57,15 @@ public class E22UsoArrayList {
 //            persona = new Persona();
 //            persona = (Persona) vector[i];
 //            System.out.println(persona.toString());
-//        }
+//        } NO SE LOGRO 
         
 //        Iterator<Persona> it = vector.iterator();
-        
 //        while(it.hasNext()){
 //            System.out.println(it.next());
 //        }
-        
-        
-
-        
-        
     }  
 
-    private static void ingresarDatos(LinkedList<Persona> vector) {                    
+    private static void ingresarDatos(ArrayList<Persona> vector) {                    
         Persona persona = new Persona();
         persona.ingresarDatos();
         vector.add(persona);
