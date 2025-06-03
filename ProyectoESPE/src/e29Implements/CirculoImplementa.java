@@ -9,6 +9,10 @@ public class CirculoImplementa implements Circulo{
     public CirculoImplementa(){
         this.radio = 0.0;
     }
+    
+    public CirculoImplementa(double radio){
+        this.radio = radio;
+    }
 
     @Override
     public double getRadio() {
@@ -28,5 +32,11 @@ public class CirculoImplementa implements Circulo{
     @Override
     public double getPerimetro() {
         return (2*Math.PI*radio);
+    }
+    
+    //uso del metodo toString
+    @Override
+    public String toString(){
+        return "Circulo Implementacion:{Radio: " + getRadio() + "}";
     }
 }
