@@ -1,3 +1,4 @@
+//02/06/2025
 package e27PolimorfismoPersona;
 
 import java.util.ArrayList;
@@ -5,7 +6,6 @@ import java.util.Iterator;
 import java.util.Scanner;
 
 public class Principal {
-
     public static void main(String[] args) {   
         ArrayList<Persona> vector = new ArrayList<>();
         Persona persona;
@@ -68,3 +68,4 @@ public class Principal {
 //METODO SIN CUERPO ES ABSTRACTO
 //ABSTRACTO METODO SIN CUERPO, TERMINA CON PUNTO Y COMA
 //CLASE ABSTRACTA -> METODO ABSTRACTO
+//CLASE ABSTRACTA PUEDE TENER METODOS CONCRETOS,PERO UNA CLASE CONCRETA NO PUEDE TENER UN METODO ABSTRACTO

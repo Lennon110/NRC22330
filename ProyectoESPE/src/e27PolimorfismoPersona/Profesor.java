@@ -28,16 +28,10 @@ public class Profesor extends Persona{
         System.out.print("\t" + getTitulo());
     }
 
-    /**
-     * @return the titulo
-     */
+    //getters y setters
     public String getTitulo() {
         return titulo;
     }
-
-    /**
-     * @param titulo the titulo to set
-     */
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
