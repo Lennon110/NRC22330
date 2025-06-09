@@ -4,6 +4,7 @@ package e27PolimorfismoPersona;
 import java.util.Scanner;
 
 public class Estudiante extends Persona {
+    //atributos
     private String carrera;
     
      //constructor vacio o por defecto
@@ -26,17 +27,11 @@ public class Estudiante extends Persona {
         super.mostrarDatos();
         System.out.print("\t" + getCarrera());
     }
-
-    /**
-     * @return the carrera
-     */
+    
+    //getters y setters
     public String getCarrera() {
         return carrera;
     }
-
-    /**
-     * @param carrera the carrera to set
-     */
     public void setCarrera(String carrera) {
         this.carrera = carrera;
     }

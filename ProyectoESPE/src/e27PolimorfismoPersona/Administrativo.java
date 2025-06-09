@@ -14,7 +14,7 @@ public class Administrativo extends Persona {
         this.sueldo = (float) 0.0;
     }
  
-    //metodo que permite ingresar datos del estudiante
+    //metodo que permite ingresar datos del administrativo
     @Override
     public void ingresarDatos(){
         super.ingresarDatos(); 
@@ -25,37 +25,23 @@ public class Administrativo extends Persona {
         setSueldo(scanner.nextFloat());
     }
     
-    //metodo que permite mostrar datos del estudiante
+    //metodo que permite mostrar datos del administrativo
     @Override
     public void mostrarDatos(){
         super.mostrarDatos();
         System.out.print("\t" + getNivel() + "\t" + getSueldo());
     }
     
-    /**
-     * @return the nivel
-     */
+    //getters y setters
     public int getNivel() {
         return nivel;
     }
-
-    /**
-     * @param nivel the nivel to set
-     */
     public void setNivel(int nivel) {
         this.nivel = nivel;
     }
-
-    /**
-     * @return the sueldo
-     */
     public float getSueldo() {
         return sueldo;
     }
-
-    /**
-     * @param sueldo the sueldo to set
-     */
     public void setSueldo(float sueldo) {
         this.sueldo = sueldo;
     }

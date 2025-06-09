@@ -22,16 +22,17 @@ public class Persona {
         System.out.println("Ingrese la cedula: ");
         setCedula(scanner.nextLine());
         System.out.println("Ingrese el nombre: ");
-        nombre = scanner.nextLine();
+        setNombre(scanner.nextLine());
         System.out.println("Ingrese el peso: ");
-        peso = scanner.nextFloat();
+        setPeso(scanner.nextFloat());
     }
     
     //metodo que permite mostrar datos de la persona
     public void mostrarDatos(){
-        System.out.print(this.getCedula() + "\t" + nombre + "\t" + peso);
+        System.out.print(this.getCedula() + "\t" + getNombre() + "\t" + getPeso());
     }
-
+    
+    //getters y setters
     public String getCedula() {
         return cedula;
     }
