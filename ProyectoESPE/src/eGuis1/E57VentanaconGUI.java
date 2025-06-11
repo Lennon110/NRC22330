@@ -4,6 +4,8 @@
  */
 package eGuis1;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author LABS-ESPE
@@ -77,6 +79,11 @@ public class E57VentanaconGUI extends javax.swing.JFrame {
         );
 
         boton1.setText("Aceptar");
+        boton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Salir");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -86,6 +93,11 @@ public class E57VentanaconGUI extends javax.swing.JFrame {
         });
 
         boton3.setText("Cancelar");
+        boton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boton3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -128,6 +140,27 @@ public class E57VentanaconGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void boton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton1ActionPerformed
+        // TODO add your handling code here:
+        String clave = "123";
+        if (this.jTextField3.getText().equals("RUBEN")){
+            if (this.jPasswordField1.getText().equals(clave)){
+                new E58Notas().setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "La clave esta mal");
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "El usuario esta mal");
+        }
+        this.setVisible(false);
+    }//GEN-LAST:event_boton1ActionPerformed
+
+    private void boton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton3ActionPerformed
+        // TODO add your handling code here:
+        this.jTextField3.setText(null);
+        this.jPasswordField1.setText(null);
+    }//GEN-LAST:event_boton3ActionPerformed
 
     /**
      * @param args the command line arguments
