@@ -2,8 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package eGuis1.e59Ventanas;
+package eGuis1.e59Ventanas.vista;
 
+import eGuis1.e59Ventanas.modelo.CPersona;
 import javax.swing.DropMode;
 import javax.swing.JOptionPane;
 

@@ -95,6 +95,11 @@ public class E60Tablas extends javax.swing.JFrame {
         });
 
         jButton3.setText("Actualizar");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Nombre");
 
@@ -249,7 +254,16 @@ public class E60Tablas extends javax.swing.JFrame {
 
     private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_jTextField5ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        tablon.setValueAt(jTextField7.getText(),
+                Integer.parseInt(jTextField5.getText())-1,
+                Integer.parseInt(jTextField6.getText())-1
+        );
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -308,3 +322,6 @@ public class E60Tablas extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField7;
     // End of variables declaration//GEN-END:variables
 }
+
+
+//CRUD
