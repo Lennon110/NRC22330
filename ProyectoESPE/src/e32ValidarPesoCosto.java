@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 
-public class e31ValidarPesoCosto {
+public class e32ValidarPesoCosto {
 
     public static void main(String[] args) {
         //declarar
