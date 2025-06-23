@@ -8,7 +8,7 @@ import java.awt.event.*;
 //clase principal
 public class E41jComboBox extends JFrame implements ActionListener{
     
-    //atributos
+    //variables globales
     private JLabel label1,label2,label3;
     private JComboBox combo1,combo2,combo3;
     private JButton boton1;
@@ -19,10 +19,12 @@ public class E41jComboBox extends JFrame implements ActionListener{
         setLayout(null);
         
         //elementos
+        
         //etiqueta de texto
         label1=new JLabel("Rojo:");
         label1.setBounds(10,10,100,30);
         add(label1);
+        
         //lista desplegable
         combo1=new JComboBox();
         combo1.setBounds(120,10,50,30);
@@ -51,6 +53,7 @@ public class E41jComboBox extends JFrame implements ActionListener{
             combo3.addItem(String.valueOf(f));
         }
         add(combo3);
+        
         //boton
         boton1=new JButton("Fijar Color");
         boton1.setBounds(10,130,100,30);
@@ -79,6 +82,7 @@ public class E41jComboBox extends JFrame implements ActionListener{
         E41jComboBox formulario1=new E41jComboBox();
         //ventana
         formulario1.setBounds(0,0,400,300);
+        formulario1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         formulario1.setVisible(true);
     }    
 }

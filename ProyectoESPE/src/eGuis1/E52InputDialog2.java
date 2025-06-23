@@ -13,6 +13,7 @@ public class E52InputDialog2 {
                 "Titulo",
                 JOptionPane.ERROR_MESSAGE
         );
+        
         System.out.println("La respuesta es: " + respuesta);
     }
     

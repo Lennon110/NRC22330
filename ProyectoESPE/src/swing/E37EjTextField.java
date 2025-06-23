@@ -20,10 +20,12 @@ public class E37EjTextField extends JFrame implements ActionListener{
         label1=new JLabel("Usuario:");
         label1.setBounds(10,10,100,30);
         add(label1);
+        
         //campo de texto
         textfield1=new JTextField();
         textfield1.setBounds(120,10,150,20);
         add(textfield1);
+        
         //boton
         boton1=new JButton("Aceptar");
         boton1.setBounds(10,80,100,30);
@@ -33,8 +35,8 @@ public class E37EjTextField extends JFrame implements ActionListener{
     
     //metodo que se ejecuta cuando se hace clic en el boton
     @Override
-    public void actionPerformed(ActionEvent e) {
-        if (e.getSource()==boton1) {
+    public void actionPerformed(ActionEvent ae) {
+        if (ae.getSource()==boton1) {
             String cad=textfield1.getText();
             setTitle(cad);
         }

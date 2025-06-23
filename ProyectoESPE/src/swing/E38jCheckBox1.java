@@ -21,10 +21,12 @@ public class E38jCheckBox1 extends JFrame implements ChangeListener{
         //para detectar cambios
         check1.addChangeListener(this);
         add(check1);
+        
         check2=new JCheckBox("Francés");
         check2.setBounds(10,50,150,30);
         check2.addChangeListener(this);        
         add(check2);
+        
         check3=new JCheckBox("Alemán");
         check3.setBounds(10,90,150,30);
         check3.addChangeListener(this);        
@@ -33,7 +35,7 @@ public class E38jCheckBox1 extends JFrame implements ChangeListener{
     
     //Metodo que se ejecuta cuando se selecciona o deselecciona un checkbox
     @Override
-    public void stateChanged(ChangeEvent e){
+    public void stateChanged(ChangeEvent ce){
         String cad="";
         //agregar a la cadena dependiendo del checkbox
         if (check1.isSelected()==true) {

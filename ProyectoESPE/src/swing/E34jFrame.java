@@ -1,5 +1,6 @@
 package swing;
 
+//librerias
 import javax.swing.*;
 
 public class E34jFrame extends JFrame{

@@ -1,3 +1,4 @@
+//Tema: Programa que realiza la suma de dos numeros y los muestra en cajas de texto
 package swing;
 
 //librerias
@@ -54,7 +55,8 @@ public class E45Suma extends JFrame implements ActionListener{
     public static void main(String[] ar) {
         E45Suma formulario1=new E45Suma();
         //ventana
-        formulario1.setBounds(50,50,190,200);
-        formulario1.setVisible(true);
+        formulario1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        formulario1.setBounds(50,600,190,200);
+    formulario1.setVisible(true);
     }
 }

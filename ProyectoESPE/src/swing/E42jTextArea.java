@@ -6,7 +6,7 @@ import java.awt.event.*;
 
 //clase principal
 public class E42jTextArea extends JFrame implements ActionListener{
-    //atributos
+    //variables globales
     private JScrollPane scrollpane1;
     private JTextArea textarea1;
     private JButton boton1;
@@ -15,12 +15,14 @@ public class E42jTextArea extends JFrame implements ActionListener{
     public E42jTextArea() {
         //gestor de diseño
         setLayout(null);
-        //caja de texto
+        
+        //elementos
+        //caja de texto con deslizador
         textarea1=new JTextArea();
-        //Panel con deslizador
         scrollpane1=new JScrollPane(textarea1);
         scrollpane1.setBounds(10,10,300,200);
         add(scrollpane1);
+        
         //boton
         boton1=new JButton("Verificar");
         boton1.setBounds(10,260,100,30);

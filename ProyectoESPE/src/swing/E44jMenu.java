@@ -1,3 +1,4 @@
+//Tema:Programa que mediante una barra de menu te permite cambiar la resolucion y el color de fondo de la ventana
 package swing;
 
 //librerias
@@ -16,30 +17,39 @@ public class E44jMenu extends JFrame implements ActionListener{
     public E44jMenu() {
         //gestor de diseño
         setLayout(null);
+        
         //elementos
+        
         //barra de menu
         mb=new JMenuBar();
         setJMenuBar(mb);
+        
         //menu principal
         menu1=new JMenu("Opciones");
         mb.add(menu1);
+        
         //submenu1(cambia tamaño)
         menu2=new JMenu("Tamaño de la ventana");
         menu1.add(menu2);
+        
         //submenu2(cambia color de fondo)
         menu3=new JMenu("Color de fondo");
         menu1.add(menu3);
+        
         //opciones submenu1
         mi1=new JMenuItem("640*480");
         menu2.add(mi1);
         mi1.addActionListener(this);
+        
         mi2=new JMenuItem("1024*768");
         menu2.add(mi2);
         mi2.addActionListener(this);
+        
         //opciones subemenu2
         mi3=new JMenuItem("Rojo");
         menu3.add(mi3);
         mi3.addActionListener(this);
+        
         mi4=new JMenuItem("Verde");
         menu3.add(mi4);
         mi4.addActionListener(this);
@@ -67,6 +77,7 @@ public class E44jMenu extends JFrame implements ActionListener{
         E44jMenu formulario1=new E44jMenu();
         //ventana
         formulario1.setBounds(0,0,300,200);
+        formulario1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         formulario1.setVisible(true);
     }     
 }

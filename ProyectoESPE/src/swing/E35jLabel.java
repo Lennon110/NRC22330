@@ -1,5 +1,6 @@
 package swing;
 
+//librerias
 import javax.swing.*;
 
 //clase principal
