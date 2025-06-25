@@ -61,7 +61,8 @@ public class e61Prueba extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent objeto) {
         if (objeto.getSource() == boton1) {
-            String resp = JOptionPane.showInputDialog(this,
+            String resp = JOptionPane.showInputDialog(
+                    this,
                     "Ingrese el valor");
             int n1 = Integer.parseInt(resp);
             int n2 = Integer.parseInt(numero2.getText());

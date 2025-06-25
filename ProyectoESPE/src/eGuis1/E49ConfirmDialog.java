@@ -9,6 +9,7 @@ public class E49ConfirmDialog extends javax.swing.JFrame { //no es necesario jfr
     
     public E49ConfirmDialog(){
         int respuesta = JOptionPane.showConfirmDialog(null, "Seleccion una opcion: ");
+        
         System.out.println("La respuesta es: " + respuesta);
     }
     public static void main(String[] args) {

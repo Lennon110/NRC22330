@@ -55,6 +55,6 @@ public class e31Ventana2 extends JFrame {
 
     public static void main(String[] args) {
         //new 30Ventana().setVisible();
-        e31Ventana2 ventana = new e31Ventana2();
+        new e31Ventana2();
     }
 }
