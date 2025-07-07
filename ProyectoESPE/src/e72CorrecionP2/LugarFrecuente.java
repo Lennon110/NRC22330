@@ -13,7 +13,7 @@ public class LugarFrecuente {
 
     @Override
     public String toString() {
-        return "LugarFrecuente{" + "nombre=" + getNombre() + ", direccion=" + getDireccion() + ", telefono=" + getTelefono() + '}';
+        return "Nombre: " + getNombre() + " Direccion: " + getDireccion() + " Telefono: " + getTelefono();
     }
 
     /**

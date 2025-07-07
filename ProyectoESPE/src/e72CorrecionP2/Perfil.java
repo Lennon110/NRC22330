@@ -11,7 +11,7 @@ public class Perfil {
 
     @Override
     public String toString() {
-        return "Perfil{" + "numeroPerfil=" + getNumeroPerfil() + ", descripcion=" + getDescripcion() + '}';
+        return getNumeroPerfil() + ". " + getDescripcion();
     }
 
     /**

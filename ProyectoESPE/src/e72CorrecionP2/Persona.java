@@ -1,11 +1,9 @@
-
 package e72CorrecionP2;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 
 public class Persona {
-    
+
     private String nombre;
     private String apellido;
     private ArrayList<Perfil> perfiles;
@@ -15,14 +13,18 @@ public class Persona {
     public Persona(String nombre, String apellido, ArrayList<Perfil> perfiles, ArrayList<LugarFrecuente> lugaresFrecuentes, Foto foto) {
         this.nombre = nombre;
         this.apellido = apellido;
-        this.perfiles = new ArrayList <Perfil>();
-        this.lugaresFrecuentes = new ArrayList <LugarFrecuente>();
+        this.perfiles = perfiles;
+        this.lugaresFrecuentes = lugaresFrecuentes;
         this.foto = foto;
     }
 
     @Override
     public String toString() {
-        return "Persona{" + "nombre=" + getNombre() + ", apellido=" + getApellido() + ", perfiles=" + getPerfiles() + ", lugaresFrecuentes=" + getLugaresFrecuentes() + ", foto=" + getFoto() + '}';
+        return "Nombre: " + getNombre() + 
+                "\nApellido: " + getApellido() + 
+                "\nPerfiles: " + getPerfiles() + 
+                "\nLugares Frecuentes:" + getLugaresFrecuentes() + 
+                "\nDatos foto: \n" + getFoto();
     }
 
     /**
@@ -70,14 +72,14 @@ public class Persona {
     /**
      * @return the lugaresFrecuentes
      */
-    public LinkedList<LugarFrecuente> getLugaresFrecuentes() {
+    public ArrayList<LugarFrecuente> getLugaresFrecuentes() {
         return lugaresFrecuentes;
     }
 
     /**
      * @param lugaresFrecuentes the lugaresFrecuentes to set
      */
-    public void setLugaresFrecuentes(LinkedList<LugarFrecuente> lugaresFrecuentes) {
+    public void setLugaresFrecuentes(ArrayList<LugarFrecuente> lugaresFrecuentes) {
         this.lugaresFrecuentes = lugaresFrecuentes;
     }
 
@@ -94,7 +96,5 @@ public class Persona {
     public void setFoto(Foto foto) {
         this.foto = foto;
     }
-    
-    
-    
+
 }
