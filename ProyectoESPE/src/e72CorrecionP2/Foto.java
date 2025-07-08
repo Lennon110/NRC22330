@@ -15,7 +15,7 @@ public class Foto {
     //metodo para mostrar los datos de la foto
     @Override
     public String toString() {
-        return "Foto{" + "path=" + getPath() + ", tipoArchivo=" + getTipoArchivo() + ", tamanio=" + getTamanio() + '}';
+        return "Path: " + getPath() + "\nTipo de archivo:" + getTipoArchivo() + "\nTamanio: " + getTamanio();
     }
 
     /**
