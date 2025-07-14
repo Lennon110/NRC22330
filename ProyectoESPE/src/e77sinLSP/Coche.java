@@ -1,5 +1,9 @@
-package e76conOCP;
+package e77sinLSP;
 
-abstract class Coche {   
-    abstract int precioMedioCoche(); 
+import e76conOCP.*;
+
+public  abstract class Coche {   
+    abstract int numAsientosRenault(Coche coche);
+    abstract int numAsientosAudi(Coche coche);
+    abstract int numAsientosMercedes(Coche coche);
 } 

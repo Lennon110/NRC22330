@@ -1,5 +1,7 @@
-package e76conOCP;
+package e78conLSP;
 
-abstract class Coche {   
-    abstract int precioMedioCoche(); 
+
+
+public  abstract class Coche {   
+    abstract int numAsientos();
 } 

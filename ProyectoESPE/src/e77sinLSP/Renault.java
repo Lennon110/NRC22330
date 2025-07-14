@@ -1,9 +1,21 @@
-package e76conOCP;
+package e77sinLSP;
 
-class Renault extends Coche {
+public class Renault extends Coche {
 
     @Override
-    int precioMedioCoche() {
-        return 18000;
+    int numAsientosRenault(Coche coche) {
+        return 4;
     }
+
+    @Override
+    int numAsientosAudi(Coche coche) {
+        return 4;
+    }
+
+    @Override
+    int numAsientosMercedes(Coche coche) {
+        return 5;
+
+    }
+
 }
